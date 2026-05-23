@@ -1,5 +1,13 @@
 const STORE_URL = 'https://r1040189-realbeans.myshopify.com'
 const PASSWORD = 'sebree'
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+  projectId: 'q6hxoe',
+  e2e: {
+    setupNodeEvents(on, config) {},
+  },
+})
 
 function enterPassword() {
   cy.visit(STORE_URL)
